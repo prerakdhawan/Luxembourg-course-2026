@@ -10,5 +10,3 @@ dependencies:
   - pymeep
   - jupyterlab
   - scipy
-  - python-lsp-server
-  - jupyterlab-lsp
