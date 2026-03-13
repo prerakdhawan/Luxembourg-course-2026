@@ -1,7 +1,9 @@
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/prerakdhawan/Luxembourg-course-2026/HEAD)
 
 # Optical modelling and Simulation workshop - Luxembourg 2026
-This repository provides the packages and assigments for the lecture *Optical Simulation and Modelling*  at **Optics of Solar Cell 2026` workshop at Laboratory of Photovoltaics, UNIVERSITÉ DU LUXEMBOURG**.
+This repository provides the packages and assigments for the lecture *Optical Simulation and Modelling*  at **Optics of Solar Cell 2026 workshop at Laboratory of Photovoltaics, UNIVERSITÉ DU LUXEMBOURG**.
+
+The lecture focuses on describing few numerical techniques like Transfer Matrix Method (TMM), Finite Element Method (FEM), Finite-Difference Time and Frequency Domain method (FDTD and FDFD) that are often used by researchers in reference to a prototypical solar cell example. General idea would be to understand which computation method works best for their given problem and how to extract meaningful photovoltaic metrics through these simulations through appropriate geometrical considerations.
 
 To get started with the assignment, use the `launch binder` icon above and look at the two notebooks.
 
@@ -11,13 +13,14 @@ To get started with the assignment, use the `launch binder` icon above and look 
 ## Task 1 : Gradient refractive index for solar cells
 It is commonly accepted in the photovoltaics community that a gradient refractive index profile can outperform a standard anti-reflection coating of same thickness in increasing the incoupling of light into the solar cell. It does so by gradually decreasing the impedance mismatch at each sub-layer thereby minimizing reflection from the front-interface. The refractive index smoothly varies from $n_{absorber}$ to $n_{air}$ as a function of distance above the semiconductor. 
 
-There are several ways to create a smooth gradient in the refractive index n(h), where n is the refractive index at height h above the substrate. One of the methods is to create a quintic refractive index profile where the refractive index is dependent on 4th order polynomial of the height [**[1]**](https://doi.org/10.1364/OE.16.009332).
+There are several ways to create a smooth gradient in the refractive index n(h), where n is the refractive index at height h above the substrate. One of the methods is to create a quintic refractive index profile where the refractive index is dependent on 5th order polynomial of the height [**[1]**](https://doi.org/10.1364/OE.16.009332).
 
 <div align="center">
 <img src="task1_tmm.jpg" width="800">
 </div>
     
-1.  Use the Transfer Matrix Method (TMM) code provided to you in this repository (`TMM.py`) for simulating a quintic refractive profile above a semi-infinite absorbing cSi layer and show that it can minimize back-reflection at normal incidence. The refractive index of your coating must smoothly vary from $n_{max}=3.5$ to $n_{min}=1$. 
+Use the Transfer Matrix Method (TMM) code provided to you in this repository (`TMM.py`) for simulating a quintic refractive profile above a semi-infinite absorbing cSi layer and show that it can minimize back-reflection at normal incidence. The refractive index of your coating must smoothly vary from $n_{max}=3.5$ to $n_{min}=1$. 
+1. Determine the coefficients for the quintic polynomial
 2.  Compare your results with an anti-reflection coating of same thickness and refractive index n=1.5. Keep the thickness of the coating (consisting of 50-100 sub-layers) to be $d=0.6\mu\text{m}$.
 
 **An example of the usage can be found in `tmm_assignment.ipynb`**
