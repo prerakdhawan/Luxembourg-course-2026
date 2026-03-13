@@ -1,4 +1,4 @@
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/prerakdhawan/Luxembourg-course-2026/HEAD) ![Notion](https://shields.io)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/prerakdhawan/Luxembourg-course-2026/HEAD)
 
 # Optical modelling and Simulation workshop - Luxembourg 2026
 This repository provides the packages and assigments for the lecture *Optical Simulation and Modelling*  at **Optics of Solar Cell 2026` workshop at Laboratory of Photovoltaics, UNIVERSITÉ DU LUXEMBOURG**.
@@ -28,13 +28,11 @@ Whispering gallery modes (WGMs) are resonances that occur when waves, acoustic o
 <img src="task2_mie_cylindrical.jpg" width="600">
 </div>
 
-Researchers have created nanoscale dielectric resonators of $\text{ZnO}$, $\text{SiO}_2$, $\text{TiO}_2$ to excite such resonances and used it for light trapping in solar cells. These nanostructures diffractively couple incident sunlight into WGM modes, circulating it within the active material thus increasing the optical path length and thereby higher photocurrent [**[2]**](https://doi.org/10.1039/C3CP53162G).
+Researchers have created nanoscale dielectric resonators of $\text{ZnO}$, $\text{SiO}_2$, $\text{TiO}_2$ to excite such Mie resonances and used it for light trapping in solar cells. These nanostructures diffractively couple incident sunlight into WGM modes, circulating it within the active material thus increasing the optical path length and thereby higher photocurrent [**[2]**](https://doi.org/10.1039/C3CP53162G).
 
-Built in 1708, this gallery demonstrates the same underlying physics that governs Mie resonances in **infinitely long dielectric cylinders**.
-1.  Use the Mie code provided to you To study scattering from an infinitely long cylindrical scatterer, the Maxwell’s equations must first be re-written in cylindrical coordinates (2D). Using $x^2  (d^2 y)/(dx^2)+x dy/dx-(v^2-x^2 )y=0$, describe the ansatz for the Maxwell’s equations in cylindrical coordinates. 
+Use the Mie code `mie_coefficients.py` provided to you to study the scattering from an infinitely long dielectric cylinder in the Mie regime. Use this paper for your reference [**[3]**](http://dx.doi.org/10.2528/PIER97071100).
 
-2. Using the function .. , extract the Mie coefficient `a` and plot the scattering cross-section $Q_{scattering}$ as a function of varying wavelength and diameter while keeping the refractive index to be $n=2.5$.
+1. For an infinite cylinder with radius $r=0.45\mu\text{m}$ and refractive index $n=2.31$, determine a wavelength $\lambda=\lambda_0$ for TE polarization at which a WGM can be excited.
+2. Repeat the procedure from (1) but with refractive index $n=2.745$ and radius $r=0.3\mu\text{m}$. At what wavelength and mode number can you excite a whispering gallery mode with these parameters.
 
-**An example of the usage can be found in `mie_cylindrical_assignment.ipynb`**
-
-3. **[BONUS]** : Given the same wavelength range, for what value of radii, is it possible to excite a Whispering Gallery Mode in the obstacle? Illustrate this effect by plotting the fields for TM polarization for a fixed radii and wavelength for the optimal case. 
+**An example of the usage can be found in `mie_assignment.ipynb`**
